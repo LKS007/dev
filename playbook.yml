@@ -1,0 +1,9 @@
+---
+- hosts: all
+  remote_user: vagrant
+  tasks:
+    #- name: install leiningen
+    #  sudo: true
+    #  apt: name=leiningen state=present force=yes
+    - name: Install RVM
+      shell: curl -L https://get.rvm.io | bash -s stable --autolibs=3 creates=~/.rvm
